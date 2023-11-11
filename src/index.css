@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri&family=Emblema+One&family=Inika&family=Lily+Script+One&display=swap');
 body {
-    background-image: url(res/ivan-P7X8o2U66t4-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -204,7 +203,6 @@ body {
     background-color: beige;
  }
  #reserve-img {
-    background-image: url(./res/randy-fath-Cko-B-3jPjM-unsplash.jpg);
     background-size: cover;
     background-position: center;
     height: 100%;

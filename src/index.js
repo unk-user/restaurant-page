@@ -1,4 +1,15 @@
+
+
+import scrollCatPath from './res/cat-svgrepo-com.png';
+import cat1 from './res/kevin-petit-9-y6j5asV2s-unsplash.jpg';
+import cat2 from './res/kevin-petit-ABGGdRLQ2t4-unsplash.jpg';
+import cat3 from './res/mary-p-sENUNYD9bac-unsplash.jpg';
+import cat4 from './res/tea-bell-2hNUpOolTBo-unsplash.jpg';
+import cat5 from './res/viviane-pasta-jsOi-SaGetU-unsplash.jpg';
+import background from './res/ivan-P7X8o2U66t4-unsplash.jpg';
+import reserveImage from './res/randy-fath-Cko-B-3jPjM-unsplash.jpg';
 import './index.css';
+
 
 const content = document.querySelector('#content');
 const home = document.createElement('button');
@@ -17,6 +28,8 @@ const reserveSection = document.createElement('section');
 const locationSection = document.createElement('section');
 
 function appendContent() {
+    const body = document.querySelector('body');
+    body.style.backgroundImage = `url(${background})`;
     nav.setAttribute('id', 'nav');
     main.setAttribute('id', 'main');
     footer.setAttribute('id', 'footer');
@@ -63,18 +76,13 @@ function appendHome() {
     const cardsContainer = document.createElement('div');
     cardsContainer.setAttribute('id', 'cards-container');
 
-    let urls = ['kevin-petit-9-y6j5asV2s-unsplash.jpg', 
-                'kevin-petit-ABGGdRLQ2t4-unsplash.jpg', 
-                'mary-p-sENUNYD9bac-unsplash.jpg',
-                'tea-bell-2hNUpOolTBo-unsplash.jpg',
-                'viviane-pasta-jsOi-SaGetU-unsplash.jpg'
-    ];
+    let urls = [cat1 , cat2, cat3, cat4, cat5];
     for(let i = 0; i < 5; i++) {
         let catcard = document.createElement('div');
         catcard.className = 'catcard';
         let img = document.createElement('img');
         img.className = 'cardcat';
-        img.setAttribute('src', `/src/res/${urls[i]}`);
+        img.setAttribute('src', `${urls[i]}`);
         catcard.appendChild(img);
         cardsContainer.appendChild(catcard);
     }
@@ -83,7 +91,7 @@ function appendHome() {
     scrollDown.setAttribute('id', 'scroll-down');
     const scrollCat = document.createElement('img');
     scrollCat.setAttribute('id', 'scroll-cat');
-    scrollCat.setAttribute('src', '/src/res/cat-svgrepo-com.png');
+    scrollCat.setAttribute('src', scrollCatPath);
     const scrollText = document.createElement('h3');
     scrollText.textContent = 'Scroll Down';
     scrollDown.appendChild(scrollCat);
@@ -207,6 +215,7 @@ function appendReserve() {
     
         const reserveImg = document.createElement('div');
         reserveImg.setAttribute('id', 'reserve-img');
+        reserveImg.style.backgroundImage = `url(${reserveImage})`;
     
         const reserveForm = document.createElement('div');
         reserveForm.setAttribute('id', 'reserve-form');
@@ -359,4 +368,4 @@ function appendReserve() {
  main.appendChild(quote);
  main.appendChild(midSection);
  main.appendChild(bottomSection);
- home.className = 'navitem active';
+ home.className = 'navitem active'
