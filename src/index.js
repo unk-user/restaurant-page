@@ -8,6 +8,7 @@ import cat4 from './res/tea-bell-2hNUpOolTBo-unsplash.jpg';
 import cat5 from './res/viviane-pasta-jsOi-SaGetU-unsplash.jpg';
 import background from './res/ivan-P7X8o2U66t4-unsplash.jpg';
 import reserveImage from './res/randy-fath-Cko-B-3jPjM-unsplash.jpg';
+import mapPath from './res/Location.PNG';
 import './index.css';
 
 
@@ -287,7 +288,7 @@ function appendReserve() {
     locationCard.setAttribute('id', 'location-card');
 
     const locationImg = document.createElement('img');
-    locationImg.setAttribute('src', '/src/res/Location.PNG');
+    locationImg.setAttribute('src', `${mapPath}`);
 
     const locationText = document.createElement('h2');
     locationText.textContent = 'Agadir';
