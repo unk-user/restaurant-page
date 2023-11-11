@@ -1,18 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Lily+Script+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri&family=Emblema+One&family=Inika&family=Lily+Script+One&display=swap');
 body {
-    height: 100vh;
-    width: 100vw;
     background-image: url(res/ivan-P7X8o2U66t4-unsplash.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    overflow: hidden;
     margin: 0;
 }
-#content {
-    height: 100%;
-    width: 100%;
-}
+
+/*nav bar styling*/
+
 #nav {
     width: 100%;
     height: 95px;
@@ -22,28 +18,11 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
-#logo {
-    text-align: center;
-}
-#logoIcon {
-    opacity: 0;
-    aspect-ratio: 1 / 1;
-    width: 85px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #386748, #940D0D);
-    box-shadow: 0px -16px 9px 2px rgba(0, 0, 0, 0.422) inset;
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 2.5px;
-    transform: translate(-50%, 0);
-}
 #footer {
-    width: 100vw;
-    height: 60px;
+    height: 65px;
     backdrop-filter: blur(1px);
     background-color: rgba(255, 255, 255, 0.7);
-    position: absolute;
+    position: relative;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -52,26 +31,241 @@ body {
     font-weight: 500;
     font-size: 20px;
 }
-h2 {
-    margin: 0;
-    font-family: Lily Script One;
-    font-weight: 400;
-    line-height: 30px;
-}
 #brand {
     color: #F2B006;
     word-wrap: break-word;
     font-size: 2.8rem;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
-}
-#brandIntro {
-    word-wrap: break-word;
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.69);
+    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.75);
+    margin: 0;
+    font-family: Lily Script One;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
 }
 .navitem {
-    font-family: Emblema One;
-    font-size: 26px;
+    font-family: Inika;
+    font-size: 1.8rem;
+    height: 100%;
     width: 150px;
     text-align: center;
+    background-color: transparent;
+    border: 0;
+    transition: 0.5s;
+}
+.navitem:hover {
+    cursor: pointer;
+}
+.active {
+    border-bottom: 4px solid black;
     text-shadow: -3px 3px 2px rgba(0, 0, 0, 0.486);
 }
+
+/*Home Sections*/
+
+#quote {
+    font-family: Amiri;
+    height: calc(100vh - 155px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quote > h1 {
+    font-size: 5.5rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: -1px 1px 3px black;
+}
+#mid-section {
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#scroll-down {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    transform: translate(-10px, -300px);
+}
+#scroll-down>h3 {
+    margin: 0;
+    margin-top: -15px;
+    color: #F2B006;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px black;
+}
+#scroll-cat {
+    height: 130px;
+    position: relative;
+}
+#cards-container{
+    justify-self: center;
+    width: 90%;
+    height: 380px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+.catcard {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+.catcard:hover {
+    transform: scale(1.1);
+}
+.cardcat:hover {
+    transform: translate(0, -20px);
+}
+.cardcat {
+    height: 120%;
+    transition: 0.5s;
+}
+#bottom-section {
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about {
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+    color: white;
+    padding: 30px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: Amiri;
+    line-height: 25px;
+}
+#infj {
+    text-align: end;
+}
+
+/* Menu Styling */
+
+#menu-section {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-card {
+    width: 550px;
+    border-radius: 4px;
+    border: 1px solid #F2B006;
+    background-color: rgba(243, 243, 210, 1);
+    backdrop-filter: blur(2px);
+    padding: 30px 20px;
+}
+#menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background-color: black;
+}
+.menu-column {
+    background-color: rgba(243, 243, 210, 1);
+    padding: 20px 10px;
+}
+.menu-column>h3 {
+    margin: 0;
+    font-family: Inika;
+}
+.category {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.category> li {
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Reserve section Styling */
+ #reserve-section {
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+ }
+ #reserve-card {
+    aspect-ratio: 1.6 / 1;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: beige;
+ }
+ #reserve-img {
+    background-image: url(./res/randy-fath-Cko-B-3jPjM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    overflow: hidden;
+ }
+ #reserve-form {
+    padding: 20px;
+ }
+ form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ form>input{
+    margin-bottom: 10%;
+    margin-top: 5%;
+    height: 10%;
+ }
+ form>select{
+    margin-bottom: 10%;
+    margin-top: 5%;
+    height: 10%;
+ }
+ form>label {
+    font-size: 1.2rem;
+    font-weight: Bold;
+    font-family: Inika;
+ }
+ #reserve-button {
+    height: 15%;
+    background-color: rgb(204, 204, 166);
+    color: black;
+    font-size: 1.5rem;
+    font-weight: Bold;
+    font-family: Amiri;
+ }
+
+ /* location section styling */
+
+ #location-section {
+    height: 90vh;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #location-card {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+    padding: 40px;
+    text-align: center;
+    margin: 20px 0;
+ }
+ #location-card>img {
+    width: 40vw;
+ }
+ #location-card>h2 {
+    margin: 20px 0;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ #location-card>p {
+    font-family: Arial, Helvetica, sans-serif;
+ }
